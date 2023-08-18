@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="wrapper" class="bg-black w-[100vw] h-[100vh]">
+        <div class="relative w-[1080px] mx-auto h-full flex justify-center items-center">
+            <!-- two circles -->
+            <div class="circle1 rounded-full border-black bg-[#E65754] absolute h-[200px] w-[200px] top-14 left-0"></div>
+            <div class="circle2 rounded-full border-black bg-[#7044E7] absolute h-[300px] w-[300px] bottom-0 right-0">
+            </div>
+            <!-- inner card -->
+            <div class="w-[410px] h-[494px] flex flex-col items-center justify-center bg-[#1A1A1A] gap-10 border-2 border-[#ffffff30] rounded-xl">
+                <img src="images/9D59318B_IMG_6508.JPG" alt="" class="rounded-full w-[150px] h-[150px]">
+                <h1 class="text-white text-4xl font-bold">Ishank Sainger</h1>
+                <h3 class="text-[#ffffff85] text-2xl font-bold">Full Stack Developer</h3>
+                <div class="flex gap-2">
+                    <button
+                        class="rounded-md text-[#ffffff85] text-sm font-semibold border-2 border-[#ffffffb9] h-[40px] p-3 w-[150px] flex justify-between items-center" onclick="showmodal()"><i
+                            class="fa-solid fa-share"></i>Share my Profile</button>
+                    <button
+                        class="rounded-md text-[#ffffff85] text-sm font-semibold border-2 border-[#ffffffb9] h-[40px] p-3 w-[150px] flex items-center justify-center">Follow
+                        me</button>
+                </div>
+            </div>
+            <!-- shade modal -->
+            <div class="w-[554px] h-[262px] border-1 border-[#ffffff85]  rounded-md sharedModal no-blur">
+                <div class="w-[500px] mx-auto flex flex-col gap-4">
+                    <div class="flex justify-between border-b-2">
+                        <h1 class="text-white text-4xl pt-4 font-bold">Share My Profile</h1>
+                        <button class="text-white text-4xl p-4 font-bold" onclick="closedmodal()">X</button>
+                    </div>
+                    <h2 class="text-white text-2xl">Share this Via</h2>
+                    <div class="flex gap-2 justify-between mt-4">
+                        <a href=""
+                            class="rounded-full border border-[#1771e6] w-[60px] h-[60px] flex justify-center items-center text-2xl text-[#1771e6] hover:bg-[#1771e6] hover:text-white transition-all ease-in"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""
+                            class="rounded-full border border-[#1c99e6] w-[60px] h-[60px] flex justify-center items-center text-2xl text-[#1c99e6] hover:bg-[#1c99e6] hover:text-white transition-all ease-in"><i
+                                class="fa-brands fa-twitter"></i></a>
+                        <a href=""
+                            class="rounded-full border border-[#cb2770] w-[60px] h-[60px] flex justify-center items-center text-2xl text-[#cb2770] hover:bg-[#cb2770] hover:text-white transition-all ease-in"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href=""
+                            class="rounded-full border border-[#2fe664] w-[60px] h-[60px] flex justify-center items-center text-2xl text-[#2fe664] hover:bg-[#2fe664] hover:text-white transition-all ease-in"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                        <a href=""
+                            class="rounded-full border border-[#0081c2] w-[60px] h-[60px] flex justify-center items-center text-2xl text-[#0081c2] hover:bg-[#0081c2] hover:text-white transition-all ease-in"><i
+                                class="fa-brands fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

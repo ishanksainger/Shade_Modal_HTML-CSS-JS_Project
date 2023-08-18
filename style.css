@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    box-sizing: border-box;
+}
+.sharedModal{
+    transform: scale(0);
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.active{
+    position: absolute;
+    background: #00000088;
+    backdrop-filter: blur(10px);
+    transform: scale(1);
+    opacity: 1;
+    z-index: 100;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    will-change: transform, opacity; /* Hint to the browser for optimization */
+}
+.remove{
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+
+.overlay.remove {
+    display: block; /* Show the overlay when it has the 'active' class */
+    background-color: #5f5f5f83;
+}
+.circle1 {
+    /* ... your existing styles ... */
+    animation: circle1Animation 5s infinite alternate ease-in-out;
+    box-shadow: 0 0 50px #d84869;
+}
+
+@keyframes circle1Animation {
+    0% {
+        transform: translateX(0) scale(1.1);
+    }
+    100% {
+        transform: translateX(50px) scale(1.3);
+    }
+}
+
+.circle2 {
+    /* ... your existing styles ... */
+    animation: circle2Animation 6s infinite alternate ease-in-out;
+    box-shadow: 0 0 50px #5648d8;
+}
+
+@keyframes circle2Animation {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(-50px, -50px) scale(1.0);
+    }
+}
